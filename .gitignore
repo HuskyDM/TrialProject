@@ -1,5 +1,7 @@
 /Library
 /obj
 /.vs
+.vs
+Library
 Assembly-CSharp.csproj
 TrialProject.sln
