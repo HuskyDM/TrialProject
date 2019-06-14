@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerControl : PhysicBase
 {
     bool facingRight;
+    
 
     // Start is called before the first frame update
     public override void Start()
@@ -45,10 +46,12 @@ public class PlayerControl : PhysicBase
 
         if (Input.GetButton("Jump") && hitdown) {
             hitdown = false;
+           
+            body.AddRelativeForce(new Vector2(0, 10));
+            //transform.position += move * Time.fixedDeltaTime;
             //Vector2 move = new Vector3(0f, 50f);
             //Movement(move);
-            GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(0, 175));
-            //transform.position += move * Time.fixedDeltaTime;
+            //GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(0, 175));
         }
 
     }
